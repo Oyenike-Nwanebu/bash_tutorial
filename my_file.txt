@@ -1,0 +1,200 @@
+Pikachu	Electric	none
+Bulbasaur	Grass	Poison
+Charmander	Fire	none
+Squirtle	Water	none
+Caterpie	Bug	none
+Weedle	Bug	Poison
+Pidgey	Normal	Flying
+Ivysaur	Grass	Poison
+Charmeleon	Fire	none
+Wartortle	Water	none
+Metapod	Bug	none
+Kakuna	Bug	Poison
+Pidgeotto	Normal	Flying
+Venusaur	Grass	Poison
+Charizard	Fire	Flying
+Blastoise	Water	none
+Butterfree	Bug	Flying
+Beedrill	Bug	Poison
+Pidgeot	Normal	Flying
+
+Akanbi Modupeola@Akanbi MINGW64 ~
+$ cd ~/Desktop
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ mkdir my_folder
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cd my_folder
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop/my_folder (main)
+$ cd ..
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cd my_folder
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop/my_folder (main)
+$ mkdir another_folder
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop/my_folder (main)
+$ cd another_folder
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop/my_folder/another_folder (main)
+$ cd ../..
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ touch my_file.txt
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ nano my_file.txt
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt
+Pikachu Electric        none
+Bulbasaur       Grass   Poison
+Charmander      Fire    none
+Squirtle        Water   none
+Caterpie        Bug     none
+Weedle  Bug     Poison
+Pidgey  Normal  Flying
+Ivysaur Grass   Poison
+Charmeleon      Fire    none
+Wartortle       Water   none
+Metapod Bug     none
+Kakuna  Bug     Poison
+Pidgeotto       Normal  Flying
+Venusaur        Grass   Poison
+
+
+Charizard       Fire    Flying
+Blastoise       Water   none
+Butterfree      Bug     Flying
+Beedrill        Bug     Poison
+Pidgeot Normal  Flying
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ head my_file.txt
+Pikachu Electric        none
+Bulbasaur       Grass   Poison
+Charmander      Fire    none
+Squirtle        Water   none
+Caterpie        Bug     none
+Weedle  Bug     Poison
+Pidgey  Normal  Flying
+Ivysaur Grass   Poison
+Charmeleon      Fire    none
+Wartortle       Water   none
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ head -n 5 my_file.txt
+Pikachu Electric        none
+Bulbasaur       Grass   Poison
+Charmander      Fire    none
+Squirtle        Water   none
+Caterpie        Bug     none
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ less -S my_file.txt
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt
+Pikachu Electric        none
+Bulbasaur       Grass   Poison
+Charmander      Fire    none
+Squirtle        Water   none
+Caterpie        Bug     none
+Weedle  Bug     Poison
+Pidgey  Normal  Flying
+Ivysaur Grass   Poison
+Charmeleon      Fire    none
+Wartortle       Water   none
+Metapod Bug     none
+Kakuna  Bug     Poison
+Pidgeotto       Normal  Flying
+Venusaur        Grass   Poison
+Charizard       Fire    Flying
+Blastoise       Water   none
+Butterfree      Bug     Flying
+Beedrill        Bug     Poison
+Pidgeot Normal  Flying
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt | cut -f 2
+Electric
+Grass
+Fire
+Water
+Bug
+Bug
+Normal
+Grass
+Fire
+Water
+Bug
+Bug
+Normal
+Grass
+Fire
+Water
+Bug
+Bug
+Normal
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt | cut -f 2 | uniq -c
+      1 Electric
+      1 Grass
+      1 Fire
+      1 Water
+      2 Bug
+      1 Normal
+      1 Grass
+      1 Fire
+      1 Water
+      2 Bug
+      1 Normal
+      1 Grass
+      1 Fire
+      1 Water
+      2 Bug
+      1 Normal
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt | cut -f 2 | sort
+Bug
+Bug
+Bug
+Bug
+Bug
+Bug
+Electric
+Fire
+Fire
+Fire
+Grass
+Grass
+Grass
+Normal
+Normal
+Normal
+Water
+Water
+Water
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt | cut -f 2 | sort | uniq -c
+      6 Bug
+      1 Electric
+      3 Fire
+      3 Grass
+      3 Normal
+      3 Water
+
+Akanbi Modupeola@Akanbi MINGW64 ~/Desktop (main)
+$ cat my_file.txt | cut -f 2 | sort | uniq -c | sort -k1,1nr
+      6 Bug
+      3 Fire
+      3 Grass
+      3 Normal
+      3 Water
+      1 Electric
